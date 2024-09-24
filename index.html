@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate Bangladesh</title>
+  <!-- Googl font cdn link ---------------- -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+  <!-- Daisyui cdn link------------------ -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- font-family: "Lexend", sans-serif; -->
+</head>
+
+<body id="body">
+  <header class="lg:px-20 py-4 sm:px-4 bg-[#F9F7F3] sticky top-0 z-10">
+    <div class="navbar">
+      <div class="navbar-start">
+        <div class="dropdown">
+        </div>
+        <a id="btn_blog" class="btn bg-[#B4F461] lg:w-28  sm:w-16  font-semibold lg:text-xl sm:text-xs">Blog</a>
+        <a id="btn_home" class="hidden btn bg-[#B4F461] lg:w-28  sm:w-16  font-semibold lg:text-xl sm:text-xs">Home</a>
+      </div>
+      <div class="navbar-center ">
+        <div class="menu menu-horizontal px-1 flex items-center">
+          <div><img class="text-2xl size-7 " src="assets/logo.png" alt=""></div>
+          <h3 class="lg:text-2xl sm:text-xl font-extrabold inline px-2"> Donate
+            Bangladesh</h3>
+        </div>
+      </div>
+      <div class="navbar-end">
+        <img class="px-1" src="assets/coin.png" alt="">
+        <h3 id="My_balance" class="lg:text-2xl sm:text-xl font-semibold">9400 BDT</h3>
+      </div>
+    </div>
+    <!-- left-5 top-24 z-10 -->
+    <div id="btn_donation_history" class="flex justify-center pt-4 gap-4 sticky  ">
+      <button id="donation" class="btn btn-xs bg-[#B4F461] sm:btn-sm md:btn-md lg:btn-lg">Donation</button>
+      <button id="history" class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">History</button>
+    </div>
+  </header>
+
+
+  <main id="main_content" class="lg:px-20 lg:py-11 sm:px-5 py-10 relative ">
+    <div class="sticky top-0 z-50">
+      <!-- The Modal -->
+      <div id="successModal" class="hidden   absolute  lg:left-96 sm:left-10 z-50 rounded-lg  bg-white">
+        <div class="modal-content shadow-2xl border-solid border-4 border-black-800 p-5 text-center rounded-lg">
+          <h1 class="text-3xl font-bold">Congrates!</h1>
+          <div class="flex justify-center m-3">
+            <img class=" size-9" src="assets/coin.png" alt="">
+          </div>
+          <p class="text-xl font-semibold p-2">Thank you for your generous donation.</p>
+          <h4 class="text-2xl font-semibold p-2 pb-5">Successful!</h4>
+          <button id="close_btn" class="btn bg-[#F2F2F2] p-3 rounded-sm ">close confirmation</button>
+        </div>
+      </div>
+    </div>
+    <div class="hero">
+      <div class=" m-2 hero-content flex-col lg:flex-row border-boder-color border-2 rounded-lg">
+        <img src="assets/noakhali.png" alt="">
+        <div>
+          <div class="pl-4 ">
+            <div class="bg-[#F3F3F3] inline p-2 flex lg:w-1/3 sm:w-1/2">
+              <img class="px-1 inline " src="assets/coin.png" alt="">
+              <h3 id="noakhali_donate_balance" class="lg:text-xl sm:text-xs font-semibold inline"><span
+                  id="chang_amount">54000</span> BDT</h3>
+            </div>
+            <h1 id="flood_noakili" class="text-2xl font-bold pt-6">Donate for Flood at Noakhali, Bangladesh</h1>
+            <p class="py-4">
+              The recent floods in Noakhali have caused significant damage to homes infrastructure. Your donation will
+              help provide
+              essential supplies and to those affected by this disaster. Every contribution, big or small, makes
+              difference. Please
+              join us in supporting the relief efforts and making a positive impact on the lives of those in need.
+            </p>
+            <div>
+              <input id="noakhali_input" type="number" placeholder="Write Donation Amount"
+                class="input input-bordered w-full " />
+            </div>
+            <div>
+              <button id="btn_noakhali" class="btn btn-wide w-full bg-[#B4F461] my-4">Donate Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class=" m-2 hero-content flex-col lg:flex-row border-boder-color border-2 rounded-lg">
+        <img src="assets/feni.png" alt="">
+        <div>
+          <div class="pl-4">
+            <div class="bg-[#F3F3F3] inline  p-2 flex lg:w-1/3 sm:w-1/2">
+              <img class="px-1 inline" src="assets/coin.png" alt="">
+              <h3 id="feni_donate_balance" class="lg:text-xl sm:text-xl font-semibold inline">120000 BDT</h3>
+            </div>
+            <h1 id="flood_feni" class="text-2xl font-bold pt-6">Donate for Flood Relief in Feni,Bangladesh</h1>
+            <p class="py-4">
+              The recent floods in Noakhali have caused significant damage to homes infrastructure. Your donation will
+              help provide
+              essential supplies and to those affected by this disaster. Every contribution, big or small, makes
+              difference. Please
+              join us in supporting the relief efforts and making a positive impact on the lives of those in need.
+            </p>
+            <div>
+              <input id="feni_input" type="number" placeholder="Write Donation Amount"
+                class="input input-bordered w-full " />
+            </div>
+            <div>
+              <button id="btn_Feni" class="btn btn-wide w-full bg-[#B4F461] my-4">Donate Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class=" m-2 hero-content flex-col lg:flex-row border-boder-color border-2 rounded-lg">
+        <img src="assets/quota-protest.png" alt="">
+        <div>
+          <div class="pl-4">
+            <div class="bg-[#F3F3F3] inline  p-2 flex lg:w-1/3 sm:w-1/2">
+              <img class="px-1 inline" src="assets/coin.png" alt="">
+              <h3 id="quota_donate_balance" class="lg:text-xl sm:text-xl font-semibold inline">84000 BDT</h3>
+            </div>
+            <h1 id="flood_Quota" class="text-2xl font-bold pt-6">Aid for Injured in the Quota Movement</h1>
+            <p class="py-4">
+              The recent floods in Noakhali have caused significant damage to homes infrastructure. Your donation will
+              help provide
+              essential supplies and to those affected by this disaster. Every contribution, big or small, makes
+              difference. Please
+              join us in supporting the relief efforts and making a positive impact on the lives of those in need.
+            </p>
+            <div>
+              <input id="quota_input" type="number" placeholder="Write Donation Amount"
+                class="input input-bordered w-full " />
+            </div>
+            <div>
+              <button id="btn_quota" class="btn btn-wide w-full bg-[#B4F461] my-4">Donate Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div id="blog_content" class="hidden mt-6 m-6">
+    <h1 class="text-4xl font-bold py-6">Important FAQ</h1>
+    <div class="flex justify-center">
+      <div tabindex="0" class=" collapse collapse-arrow border-base-300 bg-base-200 border w-[80rem] ">
+
+        <div class="collapse-title text-xl font-medium">1. What is the Document Object Model (DOM)?</div>
+        <div class="collapse-content">
+          <p>The Document Object Model (DOM) is the data representation of the objects that comprise the structure and
+            content of a
+            document on the web. This guide will introduce the DOM, look at how the DOM represents an HTML document in
+            memory and
+            how to use APIs to create web content and applications.</p>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-center my-8">
+      <div tabindex="0" class=" collapse collapse-arrow border-base-300 bg-base-200 border w-[80rem] ">
+        <div class="collapse-title text-xl font-medium">2. How do you select an element from the DOM?</div>
+        <div class="collapse-content">
+          <p>Finding HTML elements by id <br>
+            Finding HTML elements by tag name <br>
+            Finding HTML elements by class name <br>
+            Finding HTML elements by CSS selectors <br>
+            Finding HTML elements by HTML object collections</p>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-center mb-6">
+      <div tabindex="0" class=" collapse collapse-arrow border-base-300 bg-base-200 border w-[80rem] ">
+        <div class="collapse-title text-xl font-medium">3. What is event delegation in the context of the DOM, and why
+          is it useful?</div>
+        <div class="collapse-content">
+          <p>Event delegation is a technique in JavaScript where instead of attaching an event listener to each
+            individual element,
+            you attach a single event listener to a parent element that will fire for all descendants matching a
+            selector, including
+            those added to the DOM at a later time</p>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-center mb-6">
+      <div tabindex="0" class=" collapse collapse-arrow border-base-300 bg-base-200 border w-[80rem] ">
+        <div class="collapse-title text-xl font-medium">4. How do you manipulate an element's attributes and styles
+          using the DOM?</div>
+        <div class="collapse-content">
+          <p>Manipulating Element Attributes <br>
+            The classList object only provide methods to change the class of an element. If you want to change other
+            attributes like
+            id , href , or src , you can use the setAttribute() method. The setAttribute() method accepts two arguments:
+            The name of
+            the attribute to set.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- history ----------- -->
+  <div id="history_itemd" class="hidden border-solid border-2  p-4 lg:mx-20 lg:my-11 sm:mx-5 rounded-lg ">
+
+  </div>
+
+  <script src="libray.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
